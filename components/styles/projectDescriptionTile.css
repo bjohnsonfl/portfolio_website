@@ -1,0 +1,38 @@
+.tile_container {
+    width: 80%;
+    height: inherit;
+    background:#ECEFF1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.tile_container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_project {
+    height: 20%;    
+}
+
+.tile_description {
+    height: 60%;
+    width: 80%;
+   
+}
+
+.tile_button{
+    height: 20%;
+    width: 100%;
+}
+
+
+.tile_container p, h1{
+    color: #414545;
+    text-align: center;
+    margin: 0;
+}

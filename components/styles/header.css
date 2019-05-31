@@ -1,0 +1,37 @@
+
+
+  .nav_bar_header{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 60px;
+    }
+  .nav_bar {
+    
+    display: flex;
+    height: inherit;
+  }
+  
+  .nav_bar_name{
+    display: flex;
+      align-items: center;
+      margin: 0 1rem;
+  }
+  .nav_bar_space{
+      
+     flex: 1;
+  }
+  .nav_bar_items{
+    list-style: none;
+    display: flex;
+  }
+  
+  ul a {
+    margin: 0 1rem 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #414545;
+  }

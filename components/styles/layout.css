@@ -1,0 +1,41 @@
+html {
+  background: #ffffff
+  
+}
+
+body {
+  margin: 0;
+  font-family: 'helvetica';
+  font-size: 12pt;
+  color: #414545;
+
+}
+
+.landing_Page_Intro{
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.landing_Page_Intro p{
+  
+  width: 50%;
+  margin: 0;
+  text-align: center;
+  
+  font-size: 24px;
+
+}
+
+.landing_Page_Projects{
+  height: 1500px;
+  background: #ECEFF1;
+}
+
+.projects_row img {
+  width: 40%;
+  height: 30%;
+}
