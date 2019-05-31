@@ -16,10 +16,8 @@ const IndexPage = () => (
       <p>Hello, I am a Computer Engineer Graduate from the University of Florida interested in software devlopment roles. </p>
     </div>
     <div className = "landing_Page_Projects">
-      <div className = "projects_row"> 
-        <img src = {chessPic} alt = "Chess Picture" />
-        <ProjectDescriptionTile project = "ppp"> JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD JLKJHKFDSJKFD  </ProjectDescriptionTile>
-      </div>
+        <div className = "projectImg"><img src = {chessPic} alt = "Chess Picture" /></div>
+        <div className ="tile"> <ProjectDescriptionTile project = "ppp"></ProjectDescriptionTile></div>
     </div>
     
   </Layout>

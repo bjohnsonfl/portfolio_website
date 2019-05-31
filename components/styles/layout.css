@@ -31,11 +31,39 @@ body {
 }
 
 .landing_Page_Projects{
-  height: 1500px;
+  height: 1200px;
   background: #ECEFF1;
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 40px;
+  padding: 30px;
 }
 
-.projects_row img {
-  width: 40%;
-  height: 30%;
+ .landing_Page_Projects > div {
+  width: auto;
+  max-height: 400px;
+  
 }
+
+.landing_Page_Projects img{
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+.projectImg{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.tile{
+  height: auto;
+  width: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+

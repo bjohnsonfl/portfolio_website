@@ -1,11 +1,13 @@
 .tile_container {
-    width: 80%;
+    width: 100%;
     height: inherit;
-    background:#ECEFF1;
+    background: #ffffff;;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    box-shadow: 5px 5px 5px lightgrey;
     
 }
 .tile_container div {
