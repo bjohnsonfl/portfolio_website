@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    
+    max-height: 10vh;
 }
 
 .bio_Header, .bio_paragraph_wrapper{
@@ -13,7 +13,8 @@
 
 .bio_wrapper{
     display:inline-block;
-    height: 1500px;
+    min-height: 80vh;
+    overflow: auto;
     
 }
 
@@ -45,6 +46,7 @@
 @media (min-width: 683px){
     .bio_Header, .bio_wrapper{
         padding-left: 4rem;
+        padding-right: 1rem;
     }
     
     .picture_wrapper{
