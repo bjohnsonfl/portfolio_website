@@ -12,7 +12,7 @@ body {
 }
 
 .landing_Page_Intro{
-  height: 600px;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,6 +30,21 @@ body {
 
 }
 
+.projects_Header{
+  height: 120px;
+  width: 100%;
+  background: #ECEFF1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+}
+
+.projects_Header h1, .landing_Page_Projects{
+  padding: 30px;
+}
+
+
 .landing_Page_Projects{
   height: 1200px;
   background: #ECEFF1;
@@ -37,7 +52,8 @@ body {
   grid-template-columns: 2fr 1fr; 
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 40px;
-  padding: 30px;
+  grid-row-gap: 5px;
+  
 }
 
  .landing_Page_Projects > div {
@@ -50,12 +66,14 @@ body {
   width: 100%;
   max-width: 600px;
   height: 400px;
+  box-shadow: 5px 5px 5px lightgrey;
 }
 
 .projectImg{
   display: flex;
   align-items: center;
   justify-content: left;
+  
 }
 
 .tile{
@@ -66,4 +84,24 @@ body {
   justify-content: center;
 }
 
-
+.projects_Footer{
+  height: 150px;
+  width: 100%;
+  background: #ECEFF1;
+}
+.projects_Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+}
+.projects_Footer  div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  margin: 0;
+}
