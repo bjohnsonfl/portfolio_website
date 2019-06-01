@@ -1,0 +1,24 @@
+.tab_Grid_Container{
+    display: grid;
+    grid-template-columns: 1fr 8em 3fr .5fr;
+    background: #ffffff;
+    height: 100%;
+    width: 100%;
+    border-color: #4A69A4;
+    border-style: solid;
+    border-radius: 1000000px; /*Creates circular corners */
+
+}
+
+.tab_Grid_Container div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab_Description{
+    display: flex;
+    align-items: center;
+    justify-content: left !important;
+}
