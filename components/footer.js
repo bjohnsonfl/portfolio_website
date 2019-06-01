@@ -11,7 +11,7 @@ const Footer = () => (
     <footer>
         
         <div className="footer_words">
-            <p> Thank you for visiting my website. Please make sure to view all my projects, read more about me, and to visit my social medias!</p>
+            <p> Thank you for visiting my website. Please make sure to view all my projects, read more about me, and visit my social medias!</p>
         </div>
         <div className = "footer_Icons_Row">
             <img src = {lichess} alt = "lichess" id = "lichess" width = "50px" height = "50px"/>  

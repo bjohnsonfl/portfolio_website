@@ -1,5 +1,8 @@
 # Portfolio Website
-I am currently developing a website to showcase projects that I have done. I am using the Gatsby framework, which uses the React library, JSX, and CSS. 
+I am currently developing a website to showcase projects that I have done. I am using the Gatsby framework, which uses the React library, JSX, and CSS.
+
+## Try out a live demo
+https://blakeportfoliodev.firebaseapp.com
 
 Gatsby is a static site generator, so instead of developing html pages, you can create javascript pages with JSX, React, CSS, and let Gatsby handle the rest. Gatsby also handles the server as well as routing which lets you focus on your UI. React makes developing easier by the ability to reuse code, making html cleaner to read, and facilitating passing of data.  
 
