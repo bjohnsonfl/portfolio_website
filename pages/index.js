@@ -11,6 +11,8 @@ import chessPic from "../images/chessPic.jpg"
 import iphonePic from "../images/iphone.jpg"
 import J_typePic from "../images/J_type.png"
 
+import "./styles/index.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
