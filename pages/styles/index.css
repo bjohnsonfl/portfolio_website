@@ -33,7 +33,7 @@
   
   
   .landing_Page_Projects{
-    height: 1200px;
+    min-height: 1200px;
     background: #ECEFF1;
     display: grid;
     grid-template-columns: 2fr 1fr; 
@@ -91,4 +91,33 @@
     justify-content: center;
     
     margin: 0;
+  }
+
+
+
+  @media (max-width: 750px){
+    .landing_Page_Projects{
+     
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-row-gap: 0;
+
+    }
+    
+    .landing_Page_Projects > div {
+      /*max-width: 600px;*/
+      max-height: 400px;
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .tile{
+      margin-bottom: 1rem;
+      min-height: 200px;
+    }
+
+    .landing_Page_Projects img{
+      box-shadow: 0;
+    }
   }

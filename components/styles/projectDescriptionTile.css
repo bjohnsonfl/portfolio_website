@@ -38,3 +38,9 @@
     text-align: center;
     margin: 0;
 }
+
+@media (max-width: 750px){
+    .tile_container{
+        max-width: 600px;
+    }
+}

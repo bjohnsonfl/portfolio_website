@@ -41,11 +41,7 @@
     outline: none;
     cursor: pointer;
 }
-.viewButton:hover {
-    background: #4A69A4;
-    color: white;
-    transform: scale(1.1) perspective(1px)
-}
+
 
 .viewButton:active{
      transform: translate(0px, 5px);
@@ -58,4 +54,15 @@
     border-radius: 1000000px !important;
     height: 80% !important;
 
+}
+
+@media (hover: hover) and (pointer: fine) {
+   
+
+    .viewButton:hover {
+        background: #4A69A4;
+        color: white;
+        transform: scale(1.1) perspective(1px);
+        -webkit-transform: scale(1.1) perspective(1px);
+    }
 }

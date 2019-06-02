@@ -17,7 +17,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="landing_Page_Intro">
-      <p>Hello, I am a Computer Engineer Graduate from the University of Florida interested in software devlopment roles. </p>
+      <p>Hello, I am a Computer Engineer from the University of Florida interested in software devlopment roles. </p>
     </div>
     <div className ="projects_Header"><h1>Projects</h1></div>
     <div className = "landing_Page_Projects">
