@@ -19,6 +19,8 @@ const Projects = () => (
         <ProjectDescriptionTab />
         <ProjectDescriptionTab />
         <ProjectDescriptionTab />
+        <ProjectDescriptionTab />
+        <ProjectDescriptionTab />
       </div>
     </Layout>
 )

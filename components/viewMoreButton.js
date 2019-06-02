@@ -1,10 +1,13 @@
 import React from "react"
 import "./styles/ViewMoreButton.css"
 
+
+
+
 const ViewMoreButton = (props) => (
 
     <div className = {props.style}>
-        <button className={`viewButton ${props.buttonStyle}`} >{props.phrase}</button>
+        <button className={`viewButton ${props.buttonStyle}`} onClick = {props.clicked} >{props.phrase}</button>
     </div>
 )
 
