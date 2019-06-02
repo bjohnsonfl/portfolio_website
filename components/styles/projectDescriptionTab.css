@@ -22,3 +22,39 @@
     align-items: center;
     justify-content: left !important;
 }
+
+@media (max-width: 750px){
+
+    .tab_Grid_Container{
+        grid-template-columns: 1fr .2fr;
+        grid-template-rows: 40px 1fr; 
+        border-radius: 4px;
+    }
+
+    .tab_Button{
+        display: none !important;
+    }
+    .tab_Name{
+       justify-content: left !important;
+    
+    }
+    .tab_Description{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+    .tab_Icon {
+        grid-column: 2;
+        grid-row: 1;
+        max-height: 40px;
+    }
+
+    .tab_Icon img{
+        grid-column: 2;
+        grid-row: 1;
+        width: 36px;
+    }
+    
+
+
+
+}

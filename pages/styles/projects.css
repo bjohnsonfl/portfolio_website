@@ -11,7 +11,7 @@
 }
 
 .project_Grid_Wrapper{
-    height: 400px;
+    min-height: 400px;
     padding:1rem 1rem 2rem;
     background: #ECEFF1;
     margin: 0 0 5rem 0;
