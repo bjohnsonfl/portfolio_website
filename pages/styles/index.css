@@ -39,7 +39,7 @@
     grid-template-columns: 2fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 40px;
-    grid-row-gap: 5px;
+    grid-row-gap: 20px;
     
   }
   
@@ -54,13 +54,13 @@
     max-width: 600px;
     height: 400px;
     box-shadow: 5px 5px 5px lightgrey;
+    object-fit: cover;
   }
   
   .projectImg{
     display: flex;
     align-items: center;
     justify-content: left;
-    
   }
   
   .tile{
@@ -113,7 +113,7 @@
     }
 
     .tile{
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       min-height: 200px;
     }
 
