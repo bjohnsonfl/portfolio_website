@@ -32,6 +32,7 @@
         grid-template-columns: 1fr .2fr;
         grid-template-rows: 40px 1fr; 
         border-radius: 4px;
+        
     }
 
     .tab_Button{

@@ -16,25 +16,30 @@ class ProjectDescriptionTab extends React.Component{
     }
    
 
-    clicked = (e) => {
+    open = (e) => {
         console.log("hello");
         //window.location = "/";
         this.setState({show: true});
+        
     }
 
-    closed = (e) => {
+    close = (e) => {
         this.setState({show: false});
+        console.log("close");
     }
 
-    
+    openDiv = (e) => {
+        if(window.innerWidth <= 750) this.setState({show: true});
+        console.log("openDiv");
+    }
 
     render (){ return(
-        <div className="tab_Grid_Container">
-            <div className="tab_Button"><ViewMoreButton style="button_container_tab" buttonStyle="viewButton_Tab" phrase="Learn More" clicked = {this.clicked}/></div>
-            <div className="tab_Name"><h2>Overhead</h2></div>
-            <div className="tab_Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac dui efficitur, aliquam turpis vitae, fringilla eros. Praesent malesuada sit.</div>
+        <div className="tab_Grid_Container" >
+            <div className="tab_Button"><ViewMoreButton style="button_container_tab" buttonStyle="viewButton_Tab" phrase="Learn More" clicked = {this.open}/></div>
+            <div className="tab_Name" onClick = {this.openDiv}><h2>Overhead</h2></div>
+            <div className="tab_Description" onClick = {this.openDiv}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac dui efficitur, aliquam turpis vitae, fringilla eros. Praesent malesuada sit.</div>
             <div className="tab_Icon"><img src ={github} alt = "Github Link"></img></div>
-            {this.state.show  ? <ProjectPopUp clicked = {this.closed}/> : <div></div>}
+            {this.state.show  ? <ProjectPopUp clicked = {this.close}/> : <div></div>}
             
         </div>
 

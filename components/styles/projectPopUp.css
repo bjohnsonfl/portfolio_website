@@ -2,7 +2,7 @@
 .pop_Up_Container{
     margin:0;    
 }
-.example{
+.background_Blur{
     /*display: none !important; */
     position: fixed;
     top: 0;
@@ -10,10 +10,10 @@
     right: 0;
     bottom: 0;
     margin: 0rem;
-    background: #00000029;
+    background: #00000094;
     
 }
- .text{
+ .pop_up_content{
     /*display: none !important; */
     position: fixed;
     top: 0;

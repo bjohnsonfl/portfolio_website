@@ -10,10 +10,10 @@ class ProjectPopUp extends React.Component{
 
 
 
-    render(props){ return(
+    render(){ return(
         <div className="pop_Up_Container">
-            <div className="example"></div>
-            <div className= "text">
+            <div className="background_Blur"></div>
+            <div className= "pop_up_content">
                 <ViewMoreButton style = "button_container" phrase="close" clicked = {this.props.clicked}/>
             </div>
         </div>
