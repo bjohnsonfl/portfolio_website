@@ -7,7 +7,7 @@
     border-color: #4A69A4;
     border-style: solid;
     border-radius: 1000000px; /*Creates circular corners */
-
+    border-width: 2px;
 }
 
 .tab_Grid_Container > div {

@@ -24,12 +24,19 @@
     
 }
 
+/* on project pop up, the close button isnt centered, so max the width when its noticiable*/
+@media(max-width: 750px){
+    .button_container_tab{
+        width: 100% !important;
+    }
+}
 
 .viewButton {
     border-style: solid;
     border-color: #4A69A4;
     border-radius: 10px;
-    border-width: 3px;
+    border-width: 2px;
+
     background: #ffffff;
     color: #4A69A4;
     width: 100%;

@@ -20,16 +20,21 @@ class ProjectDescriptionTab extends React.Component{
         console.log("hello");
         //window.location = "/";
         this.setState({show: true});
+        document.body.style.overflow = "hidden";
         
     }
 
     close = (e) => {
+        document.body.style.overflow = "scroll";
         this.setState({show: false});
         console.log("close");
+
     }
 
     openDiv = (e) => {
-        if(window.innerWidth <= 750) this.setState({show: true});
+        if(window.innerWidth <= 750){ this.setState({show: true});
+        document.body.style.overflow = "hidden";
+        }
         console.log("openDiv");
     }
 
