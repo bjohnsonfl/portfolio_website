@@ -12,15 +12,18 @@ class ProjectDescriptionTab extends React.Component{
     constructor(props){
         super(props);
         this.state = { show: false}
+
     
     }
    
 
     open = (e) => {
         console.log("hello");
+        console.log(this.props.projectName)
         //window.location = "/";
         this.setState({show: true});
         document.body.style.overflow = "hidden";
+        
         
     }
 
@@ -41,11 +44,10 @@ class ProjectDescriptionTab extends React.Component{
     render (){ return(
         <div className="tab_Grid_Container" >
             <div className="tab_Button"><ViewMoreButton style="button_container_tab" buttonStyle="viewButton_Tab" phrase="Learn More" clicked = {this.open}/></div>
-            <div className="tab_Name" onClick = {this.openDiv}><h2>Overhead</h2></div>
+            <div className="tab_Name" onClick = {this.openDiv}><h2>{this.props.projectName}</h2></div>
             <div className="tab_Description" onClick = {this.openDiv}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac dui efficitur, aliquam turpis vitae, fringilla eros. Praesent malesuada sit.</div>
             <div className="tab_Icon"><img src ={github} alt = "Github Link"></img></div>
-            {this.state.show  ? <ProjectPopUp clicked = {this.close}/> : <div></div>}
-            
+            {this.state.show  ? <ProjectPopUp projectName = {this.props.projectName} clicked = {this.close}/> : <div></div>}     
         </div>
 
        
