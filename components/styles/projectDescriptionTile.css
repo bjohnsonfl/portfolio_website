@@ -10,7 +10,7 @@
     box-shadow: 5px 5px 5px lightgrey;
     
 }
-.tile_container div {
+.tile_container > div {
     display: flex;
     flex-direction: column;
     align-items: center;

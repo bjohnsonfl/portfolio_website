@@ -1,8 +1,66 @@
 
 .pop_Up_Container{
-    margin:0;    
+    margin:0;   
+    
+    opacity: 0;
+    
+    animation: fadeIn 400ms forwards;
+    -webkit-animation: fadeIn 400ms forwards;
+    -moz-animation: fadeIn 400ms forwards;
+    -o-animation: fadeIn 400ms forwards;
+    -ms-animation: fadeIn 400ms forwards;
     
 }
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-o-keyframes-@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-ms-keyframes-@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* ----------------------- */
+@keyframes fadeOut{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@-moz-@keyframes fadeIn{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-@keyframes fadeIn{
+    from {opacity:1;}
+    to {opacity: 0;}
+}
+
+@-o-keyframes-@keyframes fadeIn{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-ms-keyframes-@keyframes fadeIn{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
 .background_Blur{
     /*display: none !important; */
     position: fixed;
@@ -12,8 +70,12 @@
     bottom: 0;
     margin: 0rem;
     background: #00000094;
+
     
 }
+
+
+
  .pop_up_content{
     /*display: none !important; */
     position: fixed;
@@ -24,12 +86,14 @@
     margin: 3rem;
     background: #ECEFF1;
 
-    overflow: scroll;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 
     display: grid;
     grid-template-columns: 1fr .2fr;
     grid-template-rows: 70px auto;
+
+    
     
  }
 

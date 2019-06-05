@@ -1,4 +1,4 @@
-.tab_Grid_Container{
+.tab_Grid_Container, .tab_Grid_Container_noHover{
     display: grid;
     grid-template-columns: 1fr 8em 3fr .5fr;
     background: #ffffff;
@@ -10,7 +10,24 @@
     border-width: 2px;
 }
 
-.tab_Grid_Container > div {
+
+
+@media (hover: hover) and (pointer: fine) {
+    .tab_Grid_Container:hover{
+       
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+    }
+} 
+
+
+
+
+
+
+.tab_Grid_Container > div, .tab_Grid_Container_noHover > div {
     /*height: 100%;*/
     display: flex;
     align-items: center;
@@ -28,7 +45,7 @@
 
 @media (max-width: 750px){
 
-    .tab_Grid_Container{
+    .tab_Grid_Container, .tab_Grid_Container_noHover{
         grid-template-columns: 1fr .2fr;
         grid-template-rows: 40px 1fr; 
         border-radius: 4px;

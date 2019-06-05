@@ -13,12 +13,14 @@ class ProjectPopUp extends React.Component{
     componentWillUnmount(){
         document.getElementById(this.props.projectName).style.display = "none";
     }
+
+   
     render(){ return(
         <div className="pop_Up_Container">
             <div className="background_Blur"></div>
             <div className= "pop_up_content">
                 <div className = "exitButton"><ViewMoreButton style = "button_container_tab" phrase="close" clicked = {this.props.clicked}/></div>
-                <div className = "pop_up_header"><h1>Overhead</h1></div>
+                <div className = "pop_up_header"><h1>{this.props.projectName}</h1></div>
                 <div className= "filler" >
                     <ProjectPopUpContent />
                 </div>

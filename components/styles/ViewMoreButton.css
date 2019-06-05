@@ -53,8 +53,8 @@
     .viewButton:hover {
         background: #4A69A4;
         color: white;
-        transform: scale(1.1) perspective(1px);
-        -webkit-transform: scale(1.1) perspective(1px);
+        transform: scale(1.1) ;/*perspective(1px);*/
+        -webkit-transform: scale(1.1);/* perspective(1px);*/
     }
 }
 .viewButton:active{

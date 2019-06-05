@@ -2,7 +2,7 @@
 
   .nav_bar_header{
     padding: 0;
-    margin: 0;
+    margin: 0 0rem;
     top: 0;
     left: 0;
     height: 10vh;
@@ -36,4 +36,29 @@
   a {
     text-decoration: none;
     color: #414545;
+  }
+
+  ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .select_Bar{
+    background: #4A69A4;
+    height: 2px;
+    width: 80%;
+    border-radius: 1px;
+    margin-top: 2px;
+  }
+  .select_Bar::before{
+    background: black;
+    color:white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+      .nav_bar_items li:hover, .nav_bar_name a:hover{
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+    }
   }
