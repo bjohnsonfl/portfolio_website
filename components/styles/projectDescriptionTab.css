@@ -82,7 +82,12 @@
         margin-left: 1rem;
     }
     
-
+    @media (hover: hover) and (pointer: fine) {
+    .tab_Name, .tab_Description {
+        cursor: pointer;
+    }
+        
+    }
 
 
 }

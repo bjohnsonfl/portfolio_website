@@ -8,7 +8,8 @@ body {
   font-family: 'helvetica';
   font-size: 12pt;
   color: #414545;
-
+  max-width: 80rem;
+  margin: 0 auto;
 }
 /*
 .landing_Page_Intro{

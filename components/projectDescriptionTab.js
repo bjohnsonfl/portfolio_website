@@ -19,7 +19,8 @@ class ProjectDescriptionTab extends React.Component{
 
     open = (e) => {
         
-        
+        //document.getElementsByClassName("hamburger_Blur")[0].style.display = "none";
+        //document.getElementsByClassName("nav_bar_items")[0].style.display = "none";
         document.body.style.overflow = "hidden";
 
         //Find all elements with react-reveal and turn off their transitions

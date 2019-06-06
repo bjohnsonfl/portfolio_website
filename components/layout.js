@@ -18,15 +18,19 @@ class Layout extends React.Component {
   
   componentDidMount(){
     console.log("enter " + this.props.headerBar);
-    if(this.props.headerBar){
-      document.getElementById(this.props.headerBar).style.display="block";
+   // if(this.props.headerBar && window.innerWidth >= 750){
+     // document.getElementById(this.props.headerBar).style.display="block";
+     if(this.props.headerBar){
+      document.getElementById(this.props.headerBar).className = "select_Bar_show";
       document.getElementById(this.props.headerBar).previousSibling.className = "select_Bar_Word";
     }
   }
   componentWillUnmount(){
     console.log("exit " + this.props.headerBar);
-    if(this.props.headerBar){
-       document.getElementById(this.props.headerBar).style.display = "none";
+    //if(this.props.headerBar && window.innerWidth >= 750){
+       //document.getElementById(this.props.headerBar).style.display = "none";
+       if(this.props.headerBar){
+       document.getElementById(this.props.headerBar).className = "select_Bar_hide";
        document.getElementById(this.props.headerBar).previousSibling.className = "";      
       }  
   }
