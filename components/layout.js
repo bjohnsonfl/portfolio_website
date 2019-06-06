@@ -14,22 +14,33 @@ import Header from "./header"
 import Footer from "./footer"
 import "./styles/layout.css"
 
-const Layout = (props) => (
+class Layout extends React.Component {
   
-
-    
-
-   
+  componentDidMount(){
+    console.log("enter " + this.props.headerBar);
+    if(this.props.headerBar){
+      document.getElementById(this.props.headerBar).style.display="block";
+      document.getElementById(this.props.headerBar).previousSibling.className = "select_Bar_Word";
+    }
+  }
+  componentWillUnmount(){
+    console.log("exit " + this.props.headerBar);
+    if(this.props.headerBar){
+       document.getElementById(this.props.headerBar).style.display = "none";
+       document.getElementById(this.props.headerBar).previousSibling.className = "";      
+      }  
+  }
+  
+  render(){ return(
       <>
-        <Header  headerDelay = {props.headerDelay} headerBar = {props.headerBar} />
+        <Header  headerDelay = {this.props.headerDelay}  />
        
-          <main>{props.children}</main>
+          <main>{this.props.children}</main>
         <Footer />
         
       </>
-    
-  
-)
+      )};
+  }
 
 
 

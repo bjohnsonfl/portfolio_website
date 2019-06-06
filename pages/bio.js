@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import "./styles/bio.css"
 
 const Bio = () => (
-    <Layout>
+    <Layout headerBar = {"bioBar"}>
       <SEO title="Home" />
       <div className="bio_Header">
           <h1>About Me</h1>

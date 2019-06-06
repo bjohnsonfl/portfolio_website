@@ -44,17 +44,20 @@
     justify-content: center;
     align-items: center;
   }
+
+  .select_Bar_Word{
+    margin-top: 5px;
+  }
+
   .select_Bar{
     background: #4A69A4;
     height: 2px;
     width: 80%;
     border-radius: 1px;
     margin-top: 2px;
+    display: none;
   }
-  .select_Bar::before{
-    background: black;
-    color:white;
-  }
+  
 
   @media (hover: hover) and (pointer: fine) {
       .nav_bar_items li:hover, .nav_bar_name a:hover{

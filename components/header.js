@@ -9,22 +9,29 @@ const Header = (props) => (
     <nav className="nav_bar">
      
         <Fade left delay = {0 + props.headerDelay}>
-          <div className="nav_bar_name"><a href = "/">Blake Johnson</a></div>
-        </Fade>
+        
+          {//<div className="nav_bar_name"><a href = "/">Blake Johnson</a></div>
+          }
+          <div className="nav_bar_name"><Link to ="/">Blake Johnson</Link></div>
+          
+
+      </Fade>
+       
         <div className="nav_bar_space" />
        
         <Fade right>
-          <ul className="nav_bar_items">
+        
+         <ul className="nav_bar_items">
             <li>
-              <a href = "/bio">Bio</a>
+              <Link to = "/bio">Bio</Link>
               <div id = "bioBar" className ="select_Bar"></div>
             </li>
             <li>
-              <a href = "/projects">Projects</a>
+              <Link to = "/projects">Projects</Link>
               <div id = "projectsBar" className ="select_Bar"></div>
             </li>
             <li>
-              <a href = "/contact">Contact</a>
+              <Link to = "/contact">Contact</Link>
               <div id = "contactBar" className ="select_Bar"></div>
             </li>
          

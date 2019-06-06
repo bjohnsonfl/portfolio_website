@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 import Fade from 'react-reveal/Fade';
 
 
@@ -16,7 +16,8 @@ import J_typePic from "../images/J_type.png"
 import "./styles/index.css"
 
 const linkToProject = (e) => {
-    window.location = "/projects"
+    //window.location = "/projects"
+    navigate("/projects");
 }
 
 const IndexPage = () => (
