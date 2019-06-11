@@ -3,18 +3,44 @@ import { navigate } from "gatsby"
 import React from "react"
 import Fade from 'react-reveal/Fade';
 import "./styles/header.css"
+import { timeout } from "q";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 
 class Header extends React.Component{
+  constructor(props){
+    super(props);
 
+    
+    this.state = {
+      blurDisplay: false
+    }
+  }
+  targetElement = null;
+
+  componentDidMount(){
+    this.targetElement = document.querySelector('#hamBlur');
+  }
+  componentWillUnmount(){
+    clearAllBodyScrollLocks();
+  }
+
+  
   navClicked = (e) => {
+    
     if(window.innerWidth < 750 || true){
             if(document.getElementsByClassName("nav_bar_items_show")[0]){
-              document.getElementsByClassName("hamburger_Blur")[0].style.display = "none";
+              enableBodyScroll(this.targetElement);
+             setTimeout( () => {document.getElementsByClassName("hamburger_Blur")[0].style.display = "none";},1000) 
+             //setTimeout( () => {document.getElementsByClassName("nav_bar_items_show")[0].className = "nav_bar_items_hide";},1000) 
               document.getElementsByClassName("nav_bar_items_show")[0].className = "nav_bar_items_hide";
               document.body.style.overflow = "scroll";
-
+              //document.html.style.overflow = "scroll;"
+              document.body.style.position = "unset";
+              
+              
             }
+            
      switch(e)
         {
           
@@ -34,14 +60,20 @@ class Header extends React.Component{
               document.body.style.overflow = "scroll";
               break
           case "ham":
+              disableBodyScroll(this.targetElement);
               document.getElementsByClassName("hamburger_Blur")[0].style.display = "block";
               document.getElementsByClassName("nav_bar_items_hide")[0].className = "nav_bar_items_show";
-              document.body.style.overflow = "hidden";
+              //document.body.style.overflow = "hidden";
+              //document.html.style.overflow = "hidden;"
+              document.body.style.position = "relative";
+              //document.body.style.webkitOverflowScrolling = "touch";
               //document.getElementsByClassName("nav_bar_items")[0].style.display = "flex";
-            break;
-
+              
+              break;
             
         }
+              var blurHold = this.state.blurDisplay;
+              this.setState({blurDisplay: !blurHold});
     }
 }
 
@@ -60,8 +92,8 @@ class Header extends React.Component{
         
           <div className="nav_bar_space" />
         
-          <Fade right delay = {0 + this.props.headerDelay}>
-          
+         
+          <Fade right delay = {0 + this.props.headerDelay} >
           <ul className="nav_bar_items_hide">
               <li id="toBio" className="nav_drop_down_item" onClick = {() => this.navClicked("toBio")}>
                 <Link to = "/bio" replace>Bio</Link>
@@ -78,7 +110,8 @@ class Header extends React.Component{
            </ul>
            </Fade>
            
-           <Fade right delay = {0 + this.props.headerDelay}>
+           
+           <Fade right delay = {0 + this.props.headerDelay} >
            
             <div id="ham" className="hamburger_Wrapper" onClick = {() => this.navClicked("ham")}>
                 <div className = "hamburger"></div>
@@ -88,7 +121,7 @@ class Header extends React.Component{
             </Fade>
             {//<Fade right delay = {0 + this.props.headerDelay}>
             }
-              <div id="hamBlur" className="hamburger_Blur" onClick = {() => this.navClicked("hamBlur")}></div>
+             <Fade opposite when = {this.state.blurDisplay}><div id="hamBlur" className="hamburger_Blur" onClick = {() => this.navClicked("hamBlur")} onTouchStart = {(e) => e.preventDefault}></div></Fade> 
             
       </nav>
     </header>

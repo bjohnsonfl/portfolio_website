@@ -1,19 +1,31 @@
 import React from "react"
 import { Link } from "gatsby"
+import  Fade from 'react-reveal/Fade';
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import "./styles/bio.css"
 
-const Bio = () => (
+//images
+import ufPic from "../images/ufECE.jpg"
+  
+
+class Bio extends React.Component{
+  
+
+  render (){ return(
     <Layout headerBar = {"bioBar"}>
       <SEO title="Home" />
       <div className="bio_Header">
           <h1>About Me</h1>
       </div>
       <div className="bio_wrapper">
-        <div className="picture_wrapper"> <div className="bio_picture"></div></div>
+        <div className="picture_wrapper"> 
+          <div className="bio_picture"></div>
+          <div className="uf_picture"><img src = {ufPic} ></img></div>
+        </div>
         <div className = "bio_paragraph_wrapper">
          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget tempus nisl. Vivamus eget sem tristique, tincidunt lorem ac, dignissim erat. Etiam leo dolor, pulvinar sed mi vitae, maximus finibus massa. Aliquam mauris massa, malesuada ac libero sit amet, vestibulum tincidunt dui. Morbi sagittis lacus non nibh interdum dignissim. </p>
@@ -25,7 +37,7 @@ const Bio = () => (
         </div>
       </div>
     </Layout>
-)
+  )};
+}
 
 export default Bio
-

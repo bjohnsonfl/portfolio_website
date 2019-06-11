@@ -10,6 +10,7 @@ body {
   color: #414545;
   max-width: 80rem;
   margin: 0 auto;
+  overflow: scroll;
 }
 /*
 .landing_Page_Intro{

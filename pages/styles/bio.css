@@ -19,7 +19,7 @@
 }
 
 .picture_wrapper{
-    height: 400px;
+   /* height: 700px;*/
     /*width: 100%;*/
     /*padding:1rem 1rem 2rem;*/
     
@@ -33,6 +33,18 @@
     height: 400px;
     width:  300px;
     background: lightgray;
+    margin-top: 3px;
+}
+
+
+.uf_picture{
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+}
+
+.uf_picture img{
+    width: 250px;
 }
 
 .bio_paragraph_wrapper{
@@ -74,4 +86,5 @@
          padding:0;
         
     }
+
 }
