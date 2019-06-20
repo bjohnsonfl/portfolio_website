@@ -1,6 +1,11 @@
 .tab_Grid_Container, .tab_Grid_Container_noHover{
     display: grid;
     grid-template-columns: 1fr 8em 3fr .5fr;
+
+    /********** IE FIX **************/
+    display: -ms-grid;
+    -ms-grid-columns:  1fr 8em 3fr .5fr;
+
     background: #ffffff;
     height: 100%;
     width: 100%;
@@ -10,6 +15,11 @@
     border-width: 2px;
 }
 
+/************ IE FIX **************/
+.tab_Button {-ms-grid-column: 1; z-index: 1;}
+.tab_Name {-ms-grid-column: 2}
+.tab_Description {-ms-grid-column: 3}
+.tab_Icon {-ms-grid-column: 4}
 
 
 @media (hover: hover) and (pointer: fine) {
@@ -22,8 +32,27 @@
     }
 } 
 
+/*************** IE FIX *******************
+FOR IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .tab_Grid_Container:hover{
+       
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+    }
+}
 
-
+@supports (-ms-ime-align:auto)  {
+    .tab_Grid_Container:hover{
+       
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+    }
+}
 
 
 
@@ -49,19 +78,34 @@
         grid-template-columns: 1fr .2fr;
         grid-template-rows: 40px 1fr; 
         border-radius: 4px;
-        
+        /************** IE FIX *************/
+        -ms-grid-columns: 1fr .2fr;
+        -ms-grid-rows: 40px 1fr;
     }
 
     .tab_Button{
         display: none !important;
     }
     .tab_Name{
-       justify-content: left !important;
-    
+      /************** IE FIX *************
+       justify-content: left !important;*/
+       justify-content: flex-start !important;
+       z-index: 1;
+
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        grid-row: 1;
+        grid-column: 1;
+       
     }
     .tab_Description{
         grid-column: 1 / 3;
         grid-row: 2;
+
+        /*************** IE FIX ************/
+        -ms-grid-column-span: 2;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
         
     }
 
@@ -73,6 +117,10 @@
         grid-column: 2;
         grid-row: 1;
         max-height: 40px;
+
+        /********** IE FIX ***********/
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
     }
 
     .tab_Icon img{
@@ -85,8 +133,21 @@
     @media (hover: hover) and (pointer: fine) {
     .tab_Name, .tab_Description {
         cursor: pointer;
+        }    
     }
-        
+    /*************** IE FIX ********************
+    IE cursor pointer only works if not wraped by any querry. test to see if you can do that for all browsers*/
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none ) { 
+        .tab_Name, .tab_Description {
+            cursor: pointer;
+           
+            } 
+    }
+   
+    @supports (-ms-ime-align:auto)  {
+        .tab_Name, .tab_Description {
+            cursor: pointer;
+            } 
     }
 
 

@@ -36,12 +36,39 @@
     min-height: 1200px;
     background: #ECEFF1;
     display: grid;
+    /******** IE FIX ************/
+    display: -ms-grid;
     grid-template-columns: 2fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr;
     grid-column-gap: 40px;
     grid-row-gap: 20px;
+
+    /********* IE FIX ****************/
+    -ms-grid-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
     
   }
+
+  /****************** IE FIX **************/
+    .proImg_1 { -ms-grid-row: 1}
+    .proImg_2 { -ms-grid-row: 2}
+    .proImg_3 { -ms-grid-row: 3}
+    .proTile_1 { -ms-grid-row: 1}
+    .proTile_2 { -ms-grid-row: 2}
+    .proTile_3 { -ms-grid-row: 3}
+
+    /*For IE*/
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .projectImg{margin: 4px;}
+    .tile{margin: 4px} 
+  }
+  /*for edge*/
+  @supports (-ms-ime-align:auto)  {
+    
+    .projectImg{margin: 4px;}
+    .tile{margin: 4px} 
+ }
+  
   
    .landing_Page_Projects > div {
     width: auto;
@@ -98,6 +125,8 @@
     display: flex;
     align-items: center;
     justify-content: left;
+    /*************** IE FIX **************/
+    -ms-grid-column: 1;
   }
   
   .tile{
@@ -106,6 +135,9 @@
     display: flex;
     align-content: center;
     justify-content: center;
+
+    /*************** IE FIX **************/
+    -ms-grid-column: 2;
   }
   
   .projects_Footer{
@@ -134,12 +166,34 @@
 
   @media (max-width: 750px){
     .landing_Page_Projects{
-     
+    
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-row-gap: 0;
 
+      /************ IE FIX **************/
+      -ms-grid-columns: 1fr;
+      -ms-grid-rows: 1fr;
     }
+
+     /****************** IE FIX **************/
+     .proImg_1 { -ms-grid-row: 1}
+     .proImg_2 { -ms-grid-row: 3}
+     .proImg_3 { -ms-grid-row: 5}
+     .proTile_1 { -ms-grid-row: 2}
+     .proTile_2 { -ms-grid-row: 4}
+     .proTile_3 { -ms-grid-row: 6}
+ 
+     /*For IE*/
+   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+     .projectImg{margin: 4px 0 0 0;}
+     .tile{margin: 0 0 4px 0} 
+   }
+   /*for edge*/
+   @supports (-ms-ime-align:auto)  {
+    .projectImg{margin: 4px 0 0 0;}
+    .tile{margin: 0 0 4px 0} 
+  }
     
     .landing_Page_Projects > div {
       /*max-width: 600px;*/
@@ -152,6 +206,8 @@
     .tile{
       margin-bottom: 3rem;
       min-height: 200px;
+      /**************** IE FIX **************/
+      -ms-grid-column: 1;
     }
 
     .landing_Page_Projects img{

@@ -39,7 +39,7 @@ class Layout extends React.Component {
       <>
         <Header  headerDelay = {this.props.headerDelay}  />
        
-          <main>{this.props.children}</main>
+          <div>{this.props.children}</div>
         <Footer />
         
       </>

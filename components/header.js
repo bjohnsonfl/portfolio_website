@@ -82,7 +82,7 @@ class Header extends React.Component{
       <nav className="nav_bar">
       
           <Fade left delay = {0 + this.props.headerDelay}>
-          
+        
             {//<div className="nav_bar_name"><a href = "/">Blake Johnson</a></div>
             }
             <div className="nav_bar_name"><Link to ="/">Blake Johnson</Link></div>
@@ -94,7 +94,8 @@ class Header extends React.Component{
         
          
           <Fade right delay = {0 + this.props.headerDelay} >
-          <ul className="nav_bar_items_hide">
+         
+         <ul className="nav_bar_items_hide">
               <li id="toBio" className="nav_drop_down_item" onClick = {() => this.navClicked("toBio")}>
                 <Link to = "/bio" replace>Bio</Link>
                 <div id = "bioBar" className ="select_Bar"></div>
@@ -109,7 +110,7 @@ class Header extends React.Component{
               </li>
            </ul>
            </Fade>
-           
+          
            
            <Fade right delay = {0 + this.props.headerDelay} >
            
@@ -121,7 +122,11 @@ class Header extends React.Component{
             </Fade>
             {//<Fade right delay = {0 + this.props.headerDelay}>
             }
-             <Fade opposite when = {this.state.blurDisplay}><div id="hamBlur" className="hamburger_Blur" onClick = {() => this.navClicked("hamBlur")} onTouchStart = {(e) => e.preventDefault}></div></Fade> 
+             <Fade opposite when = {this.state.blurDisplay}>
+            
+               <div id="hamBlur" className="hamburger_Blur" onClick = {() => this.navClicked("hamBlur")} onTouchStart = {(e) => e.preventDefault}></div>
+               </Fade> 
+               
             
       </nav>
     </header>

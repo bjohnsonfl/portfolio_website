@@ -57,6 +57,24 @@
         -webkit-transform: scale(1.1);/* perspective(1px);*/
     }
 }
+/******************** IE FIX *****************/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .viewButton:hover {
+        background: #4A69A4;
+        color: white;
+        transform: scale(1.1) ;/*perspective(1px);*/
+        -webkit-transform: scale(1.1);/* perspective(1px);*/
+    }
+}
+@supports (-ms-ime-align:auto)  {
+    .viewButton:hover {
+        background: #4A69A4;
+        color: white;
+        transform: scale(1.1) ;/*perspective(1px);*/
+        -webkit-transform: scale(1.1);/* perspective(1px);*/
+    }
+}
+
 .viewButton:active{
      transform: translate(0px, 5px);
      -webkit-transform: translate(0px, 5px);

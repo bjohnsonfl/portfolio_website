@@ -5,20 +5,27 @@ import "./styles/projectDescriptionTab.css"
 
 //images
 import github from "../images/GitHub-Mark-64px.png"
+import { timeout } from "q";
 
 //import { link } from "fs";
 
 class ProjectDescriptionTab extends React.Component{
     constructor(props){
         super(props);
-        this.state = { show: false}
-
-    
+        this.state = { show: false}       
     }
    
-
-    open = (e) => {
+    componentDidMount(){
+        if(this.props.hashName) { 
+            if( this.props.hashName == ("#" + this.props.projectName)){
+                 setTimeout( () => {console.log("exetime"); this.open()},2000)
+            }
+        }
         
+    }
+    
+    open = (e) => {
+        console.log("exe");
         //document.getElementsByClassName("hamburger_Blur")[0].style.display = "none";
         //document.getElementsByClassName("nav_bar_items")[0].style.display = "none";
         document.body.style.overflow = "hidden";
@@ -84,7 +91,7 @@ class ProjectDescriptionTab extends React.Component{
     }
 
     render (){ return(
-        <div className="tab_Grid_Container" >
+        <div className="tab_Grid_Container"  >
             <div className="tab_Button"><ViewMoreButton style="button_container_tab" buttonStyle="viewButton_Tab" phrase="Learn More" clicked = {this.open}/></div>
             <div className="tab_Name" onClick = {this.openDiv}><h2>{this.props.projectName}</h2></div>
             <div className="tab_Description" onClick = {this.openDiv}>{this.props.children}</div>

@@ -2,7 +2,8 @@
     background: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    /********************* IE FIX *********/
+    align-items: flex-start;
     justify-content: center;
     padding:1rem 1rem 2rem;
 }
@@ -20,6 +21,27 @@
     grid-template-rows: repeat(4, 1fr);
     grid-row-gap: 20px;
 
-
+    /******* IE FIX **************/
+    display: -ms-grid;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr;
 }
+
+/*********** IE FIX ***********/
+.proj_1 { -ms-grid-row: 1}
+.proj_2 { -ms-grid-row: 2}
+.proj_3 { -ms-grid-row: 3}
+.proj_4 { -ms-grid-row: 4}
+.proj_5 { -ms-grid-row: 5}
+.proj_6 { -ms-grid-row: 6}
+
+/*For IE*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+    .proj {margin: 10px 0 }
+    
+  }
+  /*for edge*/
+@supports (-ms-ime-align:auto)  {
+    .proj {margin: 10px 0 }
+ }
 
