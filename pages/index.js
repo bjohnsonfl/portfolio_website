@@ -25,7 +25,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Fade duration = {1500}>
     <div className="landing_Page_Intro">
-      <p>Hello, I am a Computer Engineer from the University of Florida interested in software devlopment roles. </p>
+      <p>Hello, I am a Computer Engineer from the University of Florida interested in software engineering roles. </p>
     </div>
     </Fade>
    <div className ="projects_Header"> <Fade><h1>Projects</h1></Fade></div>
