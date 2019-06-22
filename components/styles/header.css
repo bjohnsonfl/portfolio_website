@@ -94,9 +94,24 @@
   @-ms-keyframes navSlideOut{to{height: 0vh}}
 
   .nav_drop_down_item{
-    height: 40vh;
+    height: 30%;
     width: 100%;
-    
+    display: flex;
+  }
+  .nav_drop_down_item_home{
+    height: 15%;
+    position: relative;
+  }
+  
+  .homeBar {
+    width: 80%;
+    height: 1px;
+    background: rgba(0,0,0,.57);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .hamburger_Blur{
@@ -238,7 +253,7 @@
       z-index: unset;
       */
       width: auto;
-      height: auto;
+      height: 10vh;
       position: relative;
       z-index: 0;
 
@@ -247,6 +262,11 @@
     .nav_drop_down_item{
       height: 100%;
     }
+
+    .nav_drop_down_item_home{
+      display: none;
+    }
+
     .hamburger_Blur{
       display: none !important;
     }

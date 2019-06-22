@@ -47,7 +47,9 @@ class Header extends React.Component{
             
      switch(e)
         {
-          
+          case "toHome":
+            navigate("/");
+            break;
           case "toBio":
               navigate("/bio");
               break;
@@ -102,6 +104,10 @@ class Header extends React.Component{
           <Fade right delay = {0 + this.props.headerDelay} >
          
          <ul className="nav_bar_items_hide">
+              <li id="toHome" className="nav_drop_down_item nav_drop_down_item_home" onClick = {() => this.navClicked("toHome")}>
+                <Link to = "/" replace>Home</Link>
+                <div className = "homeBar"></div>
+              </li>
               <li id="toBio" className="nav_drop_down_item" onClick = {() => this.navClicked("toBio")}>
                 <Link to = "/bio" replace>Bio</Link>
                 <div id = "bioBar" className ="select_Bar"></div>
