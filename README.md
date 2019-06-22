@@ -13,7 +13,7 @@ Second, Create a Gatsby site using these steps https://www.gatsbyjs.org/docs/qui
 
 Third, navigate to the "src" folder in the gatsby site and delete all its contents. All the files in this respository should go into "src", however if you clone directly into the src directory, an aditional directory will be created so a simple fix is just clone this repository on the desktop and copy and paste the files into the src folder. This would not be an issue if I had just pushed the entire gatsby project instead of just the src, but I didn't so here we are.
 
-Fourth, update plugins and node packages. In gatsby-config.js, comment out the entire gatsby-plugin-manifest because its trying to access an image that you deleted in the src folder. Add `gatsby-plugin-polyfill-io` to this file, forinstane under `gatsby-plugin-sharp`. Next run `npm install react-reveal --save` and `npm install body-scroll-lock`.
+Fourth, update plugins and node packages. In gatsby-config.js, comment out the entire gatsby-plugin-manifest because its trying to access an image that you deleted in the src folder. Add `gatsby-plugin-polyfill-io` to this file, for instane under `gatsby-plugin-sharp`. Next run `npm install react-reveal --save` and `npm install body-scroll-lock`.
 
 Lastly, you will want to launch the website. Navigate to the root of the site and run this command: `gatsby develop`  This will compile the files, start the server, and host the website. Go to your browser and type `localhost:8000` as the url and you will be viewing the website.
 
