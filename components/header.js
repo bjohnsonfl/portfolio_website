@@ -28,12 +28,16 @@ class Header extends React.Component{
   
   navClicked = (e) => {
     
+    if(this.state.blurDisplay == false && e != "ham") return;
+
     if(window.innerWidth < 750 || true){
             if(document.getElementsByClassName("nav_bar_items_show")[0]){
               enableBodyScroll(this.targetElement);
              setTimeout( () => {document.getElementsByClassName("hamburger_Blur")[0].style.display = "none";},1000) 
              //setTimeout( () => {document.getElementsByClassName("nav_bar_items_show")[0].className = "nav_bar_items_hide";},1000) 
-              document.getElementsByClassName("nav_bar_items_show")[0].className = "nav_bar_items_hide";
+              
+             
+             document.getElementsByClassName("nav_bar_items_show")[0].className = "nav_bar_items_hide";
               document.body.style.overflow = "scroll";
               //document.html.style.overflow = "scroll;"
               document.body.style.position = "unset";
@@ -72,8 +76,10 @@ class Header extends React.Component{
               break;
             
         }
+
               var blurHold = this.state.blurDisplay;
               this.setState({blurDisplay: !blurHold});
+              console.log(blurHold)
     }
 }
 
